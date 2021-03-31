@@ -12,14 +12,23 @@ const ingredients = [
   // после чего вставит все li за одну операцию в список ul.ingredients. 
   // Для создания DOM-узлов используй document.createElement().
   
-  const item = [];
-  ingredients.forEach(function(ingridient, i, array){
-    const itemOfIngridients = document.createElement('li');
-     itemOfIngridients.textContent = ingredients[i];
-     item.push(itemOfIngridients);
-  })
+  // const itemEl = [];
+  // ingredients.forEach(function(ingridient, i, array){
+  //   const itemOfIngridientsEl = document.createElement('li');
+  //    itemOfIngridientsEl.textContent = ingredients[i];
+  //    itemEl.push(itemOfIngridientsEl);
+  // })
 
+  // const listEl = document.querySelector('ul#ingredients');
+  // console.log(listEl);
+  // listEl.append(...itemEl);
+
+  const itemEl = ingredients.map(ingridient => {
+    const itemOfIngridientsEl = document.createElement('li');
+    itemOfIngridientsEl.textContent = ingridient;
+    return itemOfIngridientsEl;
+  });
+  console.log(itemEl);
+  
   const listEl = document.querySelector('ul#ingredients');
-  console.log(listEl);
-
-  listEl.append(...item);
+  listEl.append(...itemEl)

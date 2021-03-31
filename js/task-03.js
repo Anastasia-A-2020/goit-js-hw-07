@@ -19,5 +19,19 @@ const images = [
 //   Используй массив объектов images для создания тегов img вложенных в li. 
 //   Для создания разметки используй шаблонные строки и insertAdjacentHTML().
 
+const galleryEl = images.map(image => {
+  const listItemEl = document.createElement('li');
+  const imageEl = document.createElement('img');
+  imageEl.src = image.url;
+  imageEl.alt = image.alt;
+  return listItemEl.appendChild(imageEl);
+});
+
 //   Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+
+const imagesCollectuinEl = document.querySelector('#gallery');
+console.log(imagesCollectuinEl);
+imagesCollectuinEl.append(...galleryEl);
+
 //   Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
+

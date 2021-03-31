@@ -2,9 +2,9 @@
 // Получится 'В списке 3 категории.'
 
 const itemEl = document.querySelectorAll('#categories .item');
-let sumItems = itemEl.length;
-const numberOfCategory = `В списке ${sumItems} категории.`;
-console.log(numberOfCategory);
+let sumItemsEl = itemEl.length;
+const numberOfCategoryEl = `В списке ${sumItemsEl} категории.`;
+console.log(numberOfCategoryEl);
 
 //Для каждого элемента li.item в списке ul#categories, найдет и выведет в консоль 
 // текст заголовка элемента (тега h2) и количество элементов в категории 
@@ -12,8 +12,9 @@ console.log(numberOfCategory);
 
 //console.log(itemEl);
 itemEl.forEach(el => {
-    const name = el.querySelector('h2').textContent;
-    let account = el.querySelectorAll('li').length;
-    const message = `Категория: ${name}. Количество элементов: ${account}`;
-    return console.log(message);
+    const nameEl = el.querySelector('h2').textContent;
+    let accountEl = el.querySelectorAll('li').length;
+    const messageEl = `Категория: ${nameEl}. 
+Количество элементов: ${accountEl}`;
+    return console.log(messageEl);
 })
