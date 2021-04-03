@@ -6,7 +6,6 @@ console.log(counterValue)
 
 // Создай функции increment и decrement для увеличения и уменьшения значения счетчика
 function onIncrementClick(event){
-    event.preventDefault();
     let plus = Number(counterValue.textContent) + 1;
     counterValue.innerHTML = plus;
     console.log(counterValue);
@@ -14,7 +13,6 @@ function onIncrementClick(event){
 };
 
 function onDecrementClick(event){
-    event.preventDefault();
     let minus = Number(counterValue.textContent) - 1;
     counterValue.innerHTML = minus;
     console.log(counterValue);
