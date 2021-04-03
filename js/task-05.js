@@ -2,7 +2,7 @@
 // подставляет его текущее значение в span#name-output. 
 // Если инпут пустой, в спане должна отображаться строка 'незнакомец'
 
-const refs ={
+const refs = {
     input: document.querySelector('input'),
     currentSpanName: document.querySelector('#name-output'),
     currentInputName: document.querySelector('#name-input'),
