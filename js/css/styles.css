@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+  }
+.image-collections, .picture{
+    display: flex;
+}
+
+.picture{
+  width: 360px;
+  margin-bottom: 30px;
+  background-color: lightblue;
+}
+
+.picture:not(:last-child){
+    margin-right: 10px;
+}
+
+.picture:hover,
+.picture:focus{
+    outline: 4px solid orange;
+    cursor: pointer;
+}
+
+.img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

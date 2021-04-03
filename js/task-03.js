@@ -19,17 +19,21 @@ const images = [
 //   Используй массив объектов images для создания тегов img вложенных в li. 
 //   Для создания разметки используй шаблонные строки и insertAdjacentHTML().
 
-const galleryEl = images.map(image => {
+const galleryEl = images.map(image => {``
   const listItemEl = document.createElement('li');
+  listItemEl.classList.add('picture');
   const imageEl = document.createElement('img');
   imageEl.src = image.url;
   imageEl.alt = image.alt;
-  return listItemEl.appendChild(imageEl);
+  imageEl.classList.add('img');
+  listItemEl.appendChild(imageEl);
+  return listItemEl;
 });
 
 //   Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 
 const imagesCollectuinEl = document.querySelector('#gallery');
+imagesCollectuinEl.classList.add('image-collections');
 console.log(imagesCollectuinEl);
 imagesCollectuinEl.append(...galleryEl);
 
