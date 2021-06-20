@@ -10,7 +10,6 @@ console.log(numberOfCategoryEl);
 // текст заголовка элемента (тега h2) и количество элементов в категории 
 //(всех вложенных в него элементов li).
 
-//console.log(itemEl);
 itemEl.forEach(el => {
     const nameEl = el.querySelector('h2').textContent;
     let accountEl = el.querySelectorAll('li').length;
